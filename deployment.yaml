@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: otc-rds-backup
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: otc-rds-backup
+    spec:
+      containers:
+      - name: otc-rds-backup
+        image: mtr.external.otc.telekomcloud.com/repository/eumel8/k8s-otc-rds-backup
+        env: # values from openrc file
+        - name: OS_AUTH_URL
+          value: https://iam.eu-de.otc.t-systems.com:443/v3
+        - name: OS_IDENTITY_API_VERSION
+          value: 3
+        - name: OS_REGION_NAME
+          value: eu-de
+        - name: OS_USERNAME
+          value: user
+        - name: OS_PASSWORD
+          value: password
+        - name: OS_PROJECT_NAME
+          value: eu-de
+        - name: OS_USER_DOMAIN_NAME
+          value: OTC-EU-DE-0000000000000000000
+        - name: RDS_NAME
+          value: Default
