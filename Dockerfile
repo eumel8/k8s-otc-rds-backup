@@ -1,4 +1,4 @@
-FROM ubuntu-minimal
+FROM ubuntu:18.04
 MAINTAINER Frank Kloeker <f.kloeker@telekom.de>
 RUN apt update 
 RUN apt install -y python3-pip git
