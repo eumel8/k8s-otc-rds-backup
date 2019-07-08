@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  roles:
+    - role: "otc_auth"
+    - role: "otc_rds"
+      rds_name: "{{ lookup('env','RDS_NAME') }}"
+      localaction: "backups"
+
+  tasks:
+    - name: Create backups.html file
+      template:
+        src: backups.yml.j2
+        dest: ./backups.html
+        mode: 0600
+        force: yes
