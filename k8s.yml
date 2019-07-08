@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
+  connection: local
   gather_facts: no
 
   roles:
@@ -9,9 +10,9 @@
       localaction: "backups"
 
   tasks:
-    - name: Create backups.html file
-      template:
-        src: backups.yml.j2
-        dest: ./backups.html
-        mode: 0600
+    - name: Create backups.json file
+      copy:
+        content: "{{ rdsbackups.json|to_json }}"
+        dest: ./backups.json
+        mode: 0644
         force: yes

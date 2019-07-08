@@ -34,5 +34,8 @@ if [[ -z  ${RDS_NAME} ]]; then
     exit 1
 fi
 
-ansible-playbook k8s.yml
-cat backups.html
+if ! out=`ansible-playbook -i inventory k8s.yml`; then echo $out; fi
+
+if [ -f backups.json ]; then
+  cat backups.json
+fi
