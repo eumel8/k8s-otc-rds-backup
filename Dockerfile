@@ -7,5 +7,5 @@ RUN cd /ansible-otc; pip3 install -r requirements.txt && ./install_roles.sh
 ADD k8s.yml /ansible-otc/playbooks/
 ADD k8s.sh /ansible-otc/playbooks/
 ADD backups.yml.j2 /ansible-otc/playbooks/
-ENTRYPOINT ["/bin/sh"]
+#ENTRYPOINT ["/bin/sh"]
 #ENTRYPOINT ["/ansible-otc/playbooks/k8s.sh"]
