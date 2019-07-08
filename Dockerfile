@@ -5,6 +5,7 @@ MAINTAINER Frank Kloeker <f.kloeker@telekom.de>
 ARG CACHEBUST=1
 RUN apt update 
 RUN apt install -y python3-pip git bash
+RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN git clone -b dev https://github.com/eumel8/ansible-otc.git /ansible-otc
 RUN cd /ansible-otc; pip3 install -r requirements.txt && ./install_roles.sh
 RUN cat /etc/os-release
