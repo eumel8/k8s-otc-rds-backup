@@ -1,4 +1,4 @@
-#!/bin/basj
+#!/bin/bash
 
 # test if cloud env is set
 if [[ -z  ${OS_PROJECT_NAME} ]]; then
