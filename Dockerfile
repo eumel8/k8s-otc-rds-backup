@@ -1,5 +1,5 @@
-FROM phusion/baseimage
-#FROM ubuntu:18.04
+FROM ubuntu:18.04
+#FROM phusion/baseimage
 MAINTAINER Frank Kloeker <f.kloeker@telekom.de>
 RUN apt update 
 RUN apt install -y python3-pip git bash
