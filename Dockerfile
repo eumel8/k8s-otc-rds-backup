@@ -11,4 +11,4 @@ RUN cat /etc/os-release
 ADD k8s.yml /ansible-otc/playbooks/
 ADD k8s.sh /ansible-otc/playbooks/
 ADD inventory /ansible-otc/playbooks/
-CMD cd /ansible-otc/playbooks; ./k8s.sh
+ENTRYPOINT ["cd /ansible-otc/playbooks; ./k8s.sh"]
