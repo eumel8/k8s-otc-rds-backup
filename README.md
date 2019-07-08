@@ -1,7 +1,10 @@
+[![Docker Repository on Quay Enterprise](https://mtr.external.otc.telekomcloud.com/repository/eumel8/k8s-otc-rds-backup/status "Docker Repository on Quay Enterprise")](https://mtr.external.otc.telekomcloud.com/repository/eumel8/k8s-otc-rds-backup)
+
+
 K8S container for OTC RDS service
 =================================
 
-Intro
+Use case: check backups on a selected instance
 
 Local Tests:
 ------
