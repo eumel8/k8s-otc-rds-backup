@@ -8,4 +8,5 @@ ADD k8s.yml /ansible-otc/playbooks/
 ADD k8s.sh /ansible-otc/playbooks/
 ADD backups.yml.j2 /ansible-otc/playbooks/
 # CMD /bin/bash
-ENTRYPOINT ["/ansible-otc/playbooks/k8s.sh"]
+CMD /ansible-otc/playbooks/k8s.sh
+#ENTRYPOINT ["/ansible-otc/playbooks/k8s.sh"]
