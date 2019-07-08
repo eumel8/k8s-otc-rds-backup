@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 #FROM phusion/baseimage
 MAINTAINER Frank Kloeker <f.kloeker@telekom.de>
+ARG CACHEBUST=1
 RUN apt update 
 RUN apt install -y python3-pip git bash
 RUN git clone https://github.com/eumel8/ansible-otc.git /ansible-otc
