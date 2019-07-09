@@ -34,3 +34,5 @@ Links:
 * https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/
 
 * https://blog.newrelic.com/engineering/kube-apiserver-manage-inventory/
+
+* https://github.com/sorenmat/k8s-rds
