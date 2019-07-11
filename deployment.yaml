@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: otc-rds-backup
-        image: mtr.external.otc.telekomcloud.com/repository/eumel8/k8s-otc-rds-backup
+        image: mtr.external.otc.telekomcloud.com/eumel8/k8s-otc-rds-backup:latest
         env: # values from openrc file
         - name: OS_AUTH_URL
           value: https://iam.eu-de.otc.t-systems.com:443/v3
